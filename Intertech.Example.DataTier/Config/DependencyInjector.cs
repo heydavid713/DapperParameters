@@ -30,10 +30,12 @@ namespace Intertech.Example.DataTier.Config
                 {
                     // Put your connection string from app or web.config here.
                     var connStrings = ConfigurationManager.ConnectionStrings["MyConnection"];
-                    SqlConnection connection = new SqlConnection(connStrings.ConnectionString);
-                    connection.Open();
+                    using (var connection = new SqlConnection(connStrings.ConnectionString))
+                    {
+                        connection.Open();
 
-                    return new SqlExecutor(connection);
+                        return new SqlExecutor(connection);
+                    }
                 });
             }
         }
