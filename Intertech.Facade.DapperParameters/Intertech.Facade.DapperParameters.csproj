@@ -11,6 +11,8 @@
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <FileVersion>1.0.0.1</FileVersion>
     <Version>1.0.0.1</Version>
+    <Description>This is a fork of the original DapperParameters project that is compiled to .NET Standard 2.0 instead of the original .NET Framework 4.0.
+Facade of Dappers DynamicParameters class to facilitate unit testing.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DocumentationFile>bin\Debug\Intertech.Facade.DapperParameters.XML</DocumentationFile>
